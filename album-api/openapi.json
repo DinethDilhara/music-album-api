@@ -1,0 +1,254 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SongsAlbum-API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Album-CRUD"
+    },
+    {
+      "name": "Song-CRUD"
+    }
+  ],
+  "paths": {
+    "/albums": {
+      "get": {
+        "tags": [
+          "Album-CRUD"
+        ],
+        "summary": "View All Albums",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Album-CRUD"
+        ],
+        "summary": "Add New Album",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "albumName": "Thriller",
+                  "artistName": "Michael Jackson",
+                  "genre": "Pop, Rock, Funk",
+                  "releaseDate": "1982-11-30",
+                  "songs": [
+                    {
+                      "songName": "Thriller",
+                      "duration": 358
+                    },
+                    {
+                      "songName": "Billie Jean",
+                      "duration": 293
+                    },
+                    {
+                      "songName": "Beat It",
+                      "duration": 258
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/1": {
+      "get": {
+        "tags": [
+          "Album-CRUD"
+        ],
+        "summary": "View Album By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/2": {
+      "put": {
+        "tags": [
+          "Album-CRUD"
+        ],
+        "summary": "Update Album",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "albumName": "25",
+                  "artistName": "Adele",
+                  "genre": "Pop, Soul",
+                  "releaseDate": "2015-11-20",
+                  "songs": [
+                    {
+                      "songName": "New 01 my name",
+                      "duration": 555
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/53": {
+      "delete": {
+        "tags": [
+          "Album-CRUD"
+        ],
+        "summary": "Delete Album By ID",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/1/songs": {
+      "get": {
+        "tags": [
+          "Song-CRUD"
+        ],
+        "summary": "View Songs in Album",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/1/songs/1": {
+      "get": {
+        "tags": [
+          "Song-CRUD"
+        ],
+        "summary": "View Song by Id in Album",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Song-CRUD"
+        ],
+        "summary": "Update Song by Id in Album",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "songName": "Don't Start Now",
+                  "duration": 199
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/2/songs": {
+      "post": {
+        "tags": [
+          "Song-CRUD"
+        ],
+        "summary": "Add new Song to Album",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "songName": "Don't Start Now",
+                  "duration": 183
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/albums/1/songs/9": {
+      "delete": {
+        "tags": [
+          "Song-CRUD"
+        ],
+        "summary": "Delete a Song in Album",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
