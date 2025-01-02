@@ -1,0 +1,14 @@
+@media screen and (max-width: 400px) {
+
+  .album-card {
+    padding: 10px;
+  }
+
+  .album-title {
+    font-size: 1.2rem;
+  }
+
+  .songs li {
+    font-size: 0.9rem;
+  }
+}
